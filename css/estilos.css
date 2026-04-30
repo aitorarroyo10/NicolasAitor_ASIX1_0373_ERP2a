@@ -1,3 +1,26 @@
-body {
-    margin-left: 45px;
+* {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 375;
+    font-style: normal;
+  }
+
+h1 {
+    margin-left: 15px;
+}
+
+h2 {
+    margin-left: 25px;
+}
+
+h3 {
+    margin-left: 40px;
+}
+
+p {
+    margin-left: 25px;
+}
+
+img {
+    margin-left: 25px;
 }

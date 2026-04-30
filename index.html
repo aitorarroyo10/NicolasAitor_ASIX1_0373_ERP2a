@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERP: Odoo</title>
     <link rel="stylesheet" type="text/css" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Monsieur+La+Doulaise&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rubik+Vinyl&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <h1>PRÁCTICA ERP 2: ODOO</h1>
+    <h1>ERP Parte 2 - Odoo: Aitor Arroyo y Nicolás García</h1>
 
         <h2>ÍNDICE</h2>
 
@@ -40,6 +43,8 @@
 
             </ul>
 
+            <br>
+
         <h1 id="Instalacion">Punto nº1: Instalación de Odoo</h1>
 
         <h2>Requisitos previos</h2>
@@ -50,7 +55,7 @@
 
                 <br>
 
-                <li>Odoo Community v. 17</li>
+                <li>Odoo Community v. 19</li>
 
                 <br>
 
@@ -58,19 +63,19 @@
 
             </ul>
 
-        <h3>Instalación del software Odoo 17 Community</h3>
+        <h3>Instalación del software Odoo 19 Community</h3>
 
             <p>Paso nº1: Acceder a <a href="https://www.odoo.com/es_ES/page/download">Odoo</a> e instalar la versión que queramos</p>
 
-                <img src="./imgs/img1.png" alt="Imagen 1" width="900">
+            <p>En este caso, como la versión 16 ya no se encuentra en la página oficial de Odoo, se descargará la Community 19</p>
 
-            <p>En este caso, como la versión 16 ya no se encuentra en la página oficial de Odoo, se descargará la Community 17</p>
+                <img src="./imgs/img1.png" alt="Imagen 2" width="700">
 
-                <img src="./imgs/img2.png" alt="Imagen 2" width="700">
-
-            <p>Paso nº2: Al proceder a la instalación, es importante tener la configuración mostrada en la captura, ya que Odoo necesita tener instalado el servidor de base de datos PostgreSQL, que se instala por defecto con Odoo. Hay que asegurarse que las dos primeras opciones tengan un tick verde (Odoo Server y PostreSQL Server). Avanzamos con la instalación dando next y esperamos a que se instale</p>
+            <p>Paso nº2: Al proceder a la instalación, es importante tener la configuración mostrada en la captura, ya que Odoo necesita tener instalado el servidor de base de datos PostgreSQL, que se instala por defecto con Odoo. Hay que asegurarse que las opciones tengan un tick verde (Odoo Server y PostreSQL Server). Avanzamos con la instalación dando next y esperamos a que se instale</p>
 
                 <img src="./imgs/img3.png" alt="Imagen 3" width="400">
+
+                <br>
 
                 <br>
 
@@ -106,11 +111,11 @@
 
                 <p>Al activarse el módulo, en la esquina superior izquierda (donde aparecen nueve cuadrados), hacer clic para desplegar un menú. Debería aparecer el instalado </p>
 
-                <img src="./imgs/img10.png" alt="Imagen 10" width="250">
+                <img src="./imgs/img10.png" alt="Imagen 10" width="750">
 
                 <p>Para configurarlo, en la barra superior, hacer click en Configuración > Ajustes</p>
 
-                <img src="./imgs/img11.png" alt="Imagen 11" width="450">
+                <img src="./imgs/img11.png" alt="Imagen 11" width="250">
 
                 <p>En esta página podremos configurar el módulo instalado, donde aparecen un montón de opciones para gestionar. Por ahora, activaremos dos: Traslados internos y dropshipping (solicitar a proveedores que entreguen a sus clientes)</p>
 
@@ -130,7 +135,7 @@
 
                 <img src="./imgs/img14.png" alt="Imagen 14" width="850">
 
-                <p>Creamos este Dropship de ejemplo (Aclaración: Asegurarse que el tipo de ubicaciones de origen y destino no sean 'Vista', porque si no nos saltará un error).</p>
+                <p>Creamos este Dropship de ejemplo</p>
 
                 <img src="./imgs/img15.png" alt="Imagen 15" width="850">
 
@@ -160,7 +165,7 @@
 
                 <br>
                 
-                <img src="./imgs/img20.png" alt="Imagen 20" width="750">
+                <img src="./imgs/img20.png" alt="Imagen 20" width="950">
 
                 <br>
 
@@ -192,7 +197,7 @@
 
                 <img src="./imgs/img29.png" alt="Imagen 29" width="650">
 
-            <h1 id="Backup">Punto nº3: Hacer backup a la base datos</h1>
+            <h1 id="Backup">Punto nº3: Hacer backup a una base datos + proceso de restauración</h1>
 
                 <p>Una vez creamos conveniente que hemos gestionado las operaciones de nuestro respectivo módulo, toca hacer un backup para asegurarse que lo que hacemos no se nos pierda.</p>
 
@@ -204,9 +209,42 @@
 
                 <img src="./imgs/img22.png" alt="Imagen 22" width="450">
 
-                <p>Si lo hemos hecho bien, tocará a esperar a que se haga el backup</p>
+                <p>Si lo hemos hecho bien, se iniciará una descarga y tocará a esperar a que se haga el backup</p>
 
                 <img src="./imgs/img23.png" alt="Imagen 23" width="550">
+
+                <br>
+
+                <br>
+
+            <h3>Restaurar una base de datos</h3>
+
+                <p>Para restaurar una base de datos necesitaremos:</p>
+
+                    <ul>
+
+                        <li>La master password PERSONAL</li>
+
+                        <br>
+
+                        <li>El archivo de restauración de la base de datos</li>
+
+                        <br>
+
+                        <li>Nombre de la base de datos</li>
+
+                        <br>
+
+                        <li>Indicar si será una copia o si se ha movido</li>
+
+                <img src="./imgs/img30.png" alt="Imagen 30" width="350">
+
+                    </ul>
+
+                <p>Ya hemos restaurado la BD</p>
+                
+                <img src="./imgs/img31.png" alt="Imagen 31" width="550">
+                
     
 </body>
 
